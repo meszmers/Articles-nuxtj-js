@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Article-nuxt-js',
+    title: 'Postimes',
     htmlAttrs: {
       lang: 'en'
     },
@@ -12,7 +12,9 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css'},
+      { rel: 'stylesheet', href: '//db.onlinewebfonts.com/c/cde4f9e112364abddc313cbe503012f5?family=Tabac+Sans" rel="stylesheet'}
     ]
   },
 

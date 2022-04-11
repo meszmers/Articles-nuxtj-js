@@ -1,34 +1,18 @@
-<template >
-  <div class="article">
-      <section v-for="(article, index) in articles" :key="index">
-        <h2>{{ article.headline }}</h2>
-        <img class="image" :src="article.media[0].sources.landscape.large">
-
-      </section>
+<template>
+  <div>
+    <app-menu/>
+    <app-articles/>
   </div>
 </template>
-
 <script>
+import Menu from "../components/Menu";
+import Articles from "../components/Articles";
+
 export default {
-  data() {
-    return {
-      articles: []
-    }
-  },
-  async fetch() {
-    this.articles = await fetch(
-      'https://services.postimees.ee/rest/v1/sections/81/editorsChoice/articles?limit=5'
-    ).then(res => res.json())
+  components: {
+    'app-menu': Menu,
+    'app-articles' : Articles
   }
 }
 </script>
 
-<style>
-.image {
-  text-align: right;
-  width: 780px;
-}
-.article {
-  margin-left: 100px;
-}
-</style>
